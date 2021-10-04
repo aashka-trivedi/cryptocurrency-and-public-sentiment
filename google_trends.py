@@ -4,6 +4,7 @@
 
 import pandas as pd                        
 from pytrends.request import TrendReq
+from pytrends import dailydata
 
 #Connect to Google 
 pytrends = TrendReq()
@@ -19,9 +20,23 @@ interest_data = interest_data.reset_index()
 interest_data = interest_data.drop(['isPartial'], axis=1)
 
 #Spot Check
-print(interest_data.head())
+#print(interest_data.head())
 
 #Save Data
 data_path = 'data/google_trends.csv'
-interest_data.to_csv(data_path, sep='\t')
+#interest_data.to_csv(data_path, sep='\t')
 
+#daily data
+#Reference:https://github.com/GeneralMills/pytrends/blob/master/pytrends/dailydata.py
+#Takes time- start with small time intervals
+
+#Set verbose=False to prevent progress bar
+daily_data = dailydata.get_daily_data('bitcoin', 2020, 8, 2021, 8, geo = '')
+
+
+daily_data = daily_data.reset_index()
+daily_data = daily_data.drop(['isPartial'], axis=1)
+
+print(daily_data.head())
+data_path = 'data/google_trends_daily.csv'
+daily_data.to_csv(data_path, sep='\t')
