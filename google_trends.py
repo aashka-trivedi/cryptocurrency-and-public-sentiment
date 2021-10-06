@@ -31,12 +31,12 @@ data_path = 'data/google_trends.csv'
 #Takes time- start with small time intervals
 
 #Set verbose=False to prevent progress bar
-daily_data = dailydata.get_daily_data('bitcoin', 2020, 8, 2021, 8, geo = '')
+daily_data = dailydata.get_daily_data('bitcoin', 2020, 10, 2021, 10, geo = '')
 
 
 daily_data = daily_data.reset_index()
 daily_data = daily_data.drop(['isPartial'], axis=1)
 
 print(daily_data.head())
-data_path = 'data/google_trends_daily.csv'
+data_path = 'data/google_trends_daily_oct.csv'
 daily_data.to_csv(data_path, sep='\t')
