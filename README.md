@@ -26,6 +26,7 @@ The modified data is stored in `categorical_bitcoin_price.csv`
 ## Analysis
 
 1. Granger Causality Analysis: first, we analyse whether Google Trends, Twitter Sentiment or Reddit Sentiment Granger Cause the differences in bitcoin prices. This analysis is done in `GrangerCausality.ipynb`.
+2. Classification Model: we attempt to train a classifier to use twitter sentiment scores, reddit sentiment scores, and google trend scores to predict the category of change (highly negative to higlhly positive) of bitcoin prices. Experiments with different models are in `BitcoinPriceModel.ipynb`.
 
 ## Major Findings
 
