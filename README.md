@@ -21,6 +21,7 @@ All data has been collected for the time period 2021-01-01 to 2021-08-31. The da
     - 2 (Large Increase in Price): 4000 < diff
 The modified data is stored in `categorical_bitcoin_price.csv`
 2. Google Search Trends: Since we use multiple keywords for the search numbers, we obtain a single daily search score by taking the average of the normalised search score for each keyword, and the weighted score for each keyword. The weighted score depends on how much the keyword is searched for on average. This data is stored in `trends_daily_score.csv`.  
+3. Reddit Sentiment: To obtain a daily sentiment score, we use NLTK's `vader` library, to find the sentiment for each reddit comment. We then obtain a "daily" sentiment score by finding the average of the `compound` sentiments for all comments of that day. This is done in `RedditSentiment.ipynb`, and stored in `redditDailySentiment.csv`.
 
 ## Analysis
 
@@ -29,3 +30,4 @@ The modified data is stored in `categorical_bitcoin_price.csv`
 ## Major Findings
 
 1. Using the averaged google search score shows that google searches granger cause differences in bitcoin prices. Thus, we use the *averaged* google search score in all further analysis.
+2. The average reddit sentiment per day is shown not to granger cause the Bitcoin Price changes.
