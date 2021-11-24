@@ -32,3 +32,4 @@ The modified data is stored in `categorical_bitcoin_price.csv`
 
 1. Using the averaged google search score shows that google searches granger cause differences in bitcoin prices. Thus, we use the *averaged* google search score in all further analysis.
 2. The average reddit sentiment per day is shown not to granger cause the Bitcoin Price changes.
+3. he average reddit sentiment per day is shown to strongly granger cause the Bitcoin Price changes.
