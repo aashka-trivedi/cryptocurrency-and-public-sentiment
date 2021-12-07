@@ -47,8 +47,11 @@ The modified data is stored in `data/hourly_data/categorical_bitcoin_hourly.csv`
 1. Using the averaged google search score shows that google searches granger cause differences in bitcoin prices. Thus, we use the *averaged* google search score in all further analysis.
 2. The average reddit sentiment per day is shown not to granger cause the Bitcoin Price changes.
 3. The average twitter sentiment per day is shown to strongly granger cause the Bitcoin Price changes.
+4. The best predictive model on a daily granularity is a Random Forest Classifier, which achieves a 56.6% accuracy after hyperparamter optimization.
 
 ### Hourly Analysis
 
 1. Using the averaged google search score shows that google searches strongly granger cause differences in bitcoin prices.
 2. The average reddit sentiment per hour is shown not to granger cause the Bitcoin Price changes.
+3. The average twitter sentiment per hour is shown to strongly granger cause the Bitcoin Price changes.
+4. The best predictive model on a daily granularity is a Decision Tree Classifier, which achieves a 58.7% accuracy after hyperparamter optimization.
