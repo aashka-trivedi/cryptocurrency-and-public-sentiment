@@ -31,7 +31,7 @@ The modified data is stored in `data/daily_data/categorical_bitcoin_price.csv`
     - -1 (Decrease in Price):  diff < -150
     - 0 (No Commendable Difference) : -150 <= diff <= 150
     - 1 (Increase in Price): 150 < diff 
-The modified data is stored in `data/hourly_data/categorical_bitcoin_hourlu.csv`
+The modified data is stored in `data/hourly_data/categorical_bitcoin_hourly.csv`
 2. Google Search Trends: Since we use multiple keywords for the search numbers, we obtain a single hourly search score by taking the average of the normalised search score for each keyword, and the weighted score for each keyword. The weighted score depends on how much the keyword is searched for on average. This data is stored in `data/hourly_data/trends_hourly_score.csv`.  Please note that google trends can only be found on a per-day granularity, so to obtain hourly data, the daily value is replicated over a 24 hour period.
 3. Reddit Sentiment: To obtain a daily sentiment score, we use NLTK's `vader` library, to find the sentiment for each reddit comment. We then obtain a "hourly" sentiment score by finding the average of the `compound` sentiments for all comments of that hour. This is done in `RedditSentiment.ipynb`, and stored in `data/hourly_data/redditHourlySentiment.csv`.
 
