@@ -24,6 +24,7 @@ All data has been collected for the time period 2021-01-01 to 2021-08-31. The da
 The modified data is stored in `data/daily_data/categorical_bitcoin_price.csv`
 2. Google Search Trends: Since we use multiple keywords for the search numbers, we obtain a single daily search score by taking the average of the normalised search score for each keyword, and the weighted score for each keyword. The weighted score depends on how much the keyword is searched for on average. This data is stored in `data/daily_data/trends_daily_score.csv`.  
 3. Reddit Sentiment: To obtain a daily sentiment score, we use NLTK's `vader` library, to find the sentiment for each reddit comment. We then obtain a "daily" sentiment score by finding the average of the `compound` sentiments for all comments of that day. This is done in `RedditSentiment.ipynb`, and stored in `data/daily_data/redditDailySentiment.csv`.
+4. Twitter Sentiment: We follow the same methodology to calculate the daily/hourly Twitter Sentiment as followed by Reddit. We use NLTK's Vader library to assign a daily/ hourly sentiment score  for a given day for a 8 month period.
 
 ### Hourly Analysis
 
@@ -34,6 +35,7 @@ The modified data is stored in `data/daily_data/categorical_bitcoin_price.csv`
 The modified data is stored in `data/hourly_data/categorical_bitcoin_hourly.csv`
 2. Google Search Trends: Since we use multiple keywords for the search numbers, we obtain a single hourly search score by taking the average of the normalised search score for each keyword, and the weighted score for each keyword. The weighted score depends on how much the keyword is searched for on average. This data is stored in `data/hourly_data/trends_hourly_score.csv`.  Please note that google trends can only be found on a per-day granularity, so to obtain hourly data, the daily value is replicated over a 24 hour period.
 3. Reddit Sentiment: To obtain a daily sentiment score, we use NLTK's `vader` library, to find the sentiment for each reddit comment. We then obtain a "hourly" sentiment score by finding the average of the `compound` sentiments for all comments of that hour. This is done in `RedditSentiment.ipynb`, and stored in `data/hourly_data/redditHourlySentiment.csv`.
+4. Twitter Sentiment: Following the same method to calculate daily scores, we improve the granularity of the data set by assigning an hourly score for tweets so we have a larger data feed into the model. We use NLTK's Vader library to find a compound score for each hour for an 8 month time period.
 
 ## Analysis
 
